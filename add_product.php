@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'price' => $price
     ];
 
-    // Skicka POST-förfrågan till Express-servern
     $ch = curl_init('https://din-vercel-url/api/products');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
@@ -17,6 +16,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $response = curl_exec($ch);
     curl_close($ch);
 
-    // Om du vill omdirigera till startsidan efter tillägg
     header('Location: index.php');
 }

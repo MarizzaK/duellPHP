@@ -1,5 +1,5 @@
 <?php
-// Hämta produkter från API
+
 $products = json_decode(file_get_contents('https://din-vercel-url/api/products'), true);
 ?>
 
